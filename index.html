@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css/style.css" />
@@ -28,8 +28,403 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1>Available Jobs</h1>
+  <body class="lg:max-w-[1110px] mx-auto my-[60px] px-4">
+    <header>
+      <h1 class="font-bold text-[32px] pb-5">Available Jobs</h1>
+      <div class="grid gap-5 lg:grid-cols-3">
+        <div class="bg-white rounded-xl p-5">
+          <p class="text-[#323B49]">Total</p>
+          <p id="total-count" class="font-bold text-[24px]">8</p>
+        </div>
+        <div class="bg-white rounded-xl p-5">
+          <p class="text-[#323B49]">Interview</p>
+          <p id="interview-count" class="font-bold text-[24px] text-green-500">
+            0
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-5">
+          <p class="text-[#323B49]">Rejected</p>
+          <p id="rejected-count" class="font-bold text-[24px] text-red-500">
+            0
+          </p>
+        </div>
+      </div>
+      <hr class="my-[30px] border-gray-200" />
+    </header>
+
+    <main class="space-y-[24px]">
+      <div class="flex justify-between">
+        <h2 class="font-semibold text-[20px]">Available Jobs</h2>
+        <p class="text-gray-400 text-md">8 jobs</p>
+      </div>
+      <div id="all-tab" class="flex justify-center gap-5 lg:justify-start">
+        <button
+          class="btn-tab btn w-[100px] bg-blue-400 text-white hover:bg-blue-400 hover:text-white"
+        >
+          All
+        </button>
+        <button class="btn-tab btn hover:bg-blue-400 hover:text-white">
+          Interview
+        </button>
+        <button class="btn-tab btn hover:bg-blue-400 hover:text-white">
+          Rejected
+        </button>
+      </div>
+
+      <div class="all-cards space-y-8">
+        <div class="single-card rounded-xl bg-white p-5 flex justify-between">
+          <div class="space-y-5">
+            <h3 class="font-semibold text-[18px]">Mobile First Corp</h3>
+            <p class="text-gray-400">React Native Developer</p>
+            <ul class="flex items-center gap-2 text-sm text-gray-400">
+              <li>Remote</li>
+              <li class="text-gray-400">•</li>
+              <li>Full-time</li>
+              <li class="text-gray-400">•</li>
+              <li>$130,000 – $175,000</li>
+            </ul>
+            <div>
+              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+              >
+                rejected
+              </button>
+            </div>
+            <p class="text-gray-400">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="flex gap-5">
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white"
+              >
+                rejected
+              </button>
+            </div>
+          </div>
+          <div><i class="fa-regular fa-trash-can"></i></div>
+        </div>
+
+        <div class="single-card rounded-xl bg-white p-5 flex justify-between">
+          <div class="space-y-5">
+            <h3 class="font-semibold text-[18px]">WebFlow Agency</h3>
+            <p class="text-gray-400">Web Designer & Developer</p>
+            <ul class="flex items-center gap-2 text-sm text-gray-400">
+              <li>Los Angeles, CA</li>
+              <li class="text-gray-400">•</li>
+              <li>Part-time</li>
+              <li class="text-gray-400">•</li>
+              <li>$80,000 - $120,000</li>
+            </ul>
+            <div>
+              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+              >
+                rejected
+              </button>
+            </div>
+            <p class="text-gray-400">
+              Create stunning web experiences for high-profile clients. Must
+              have portfolio and experience with modern web design trends.
+            </p>
+            <div class="flex gap-5">
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white"
+              >
+                rejected
+              </button>
+            </div>
+          </div>
+          <div><i class="fa-regular fa-trash-can"></i></div>
+        </div>
+
+        <div class="single-card rounded-xl bg-white p-5 flex justify-between">
+          <div class="space-y-5">
+            <h3 class="font-semibold text-[18px]">DataViz Solutions</h3>
+            <p class="text-gray-400">Data Visualization Specialist</p>
+            <ul class="flex items-center gap-2 text-sm text-gray-400">
+              <li>Boston, MA</li>
+              <li class="text-gray-400">•</li>
+              <li>Full-time</li>
+              <li class="text-gray-400">•</li>
+              <li>$125,000 - $165,000</li>
+            </ul>
+            <div>
+              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+              >
+                rejected
+              </button>
+            </div>
+            <p class="text-gray-400">
+              Transform complex data into compelling visualizations. Required
+              skills: D3.js, React, and strong analytical thinking.
+            </p>
+            <div class="flex gap-5">
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white"
+              >
+                rejected
+              </button>
+            </div>
+          </div>
+          <div><i class="fa-regular fa-trash-can"></i></div>
+        </div>
+
+        <div class="single-card rounded-xl bg-white p-5 flex justify-between">
+          <div class="space-y-5">
+            <h3 class="font-semibold text-[18px]">CloudFirst Inc</h3>
+            <p class="text-gray-400">Backend Developer</p>
+            <ul class="flex items-center gap-2 text-sm text-gray-400">
+              <li>Seattle, WA</li>
+              <li class="text-gray-400">•</li>
+              <li>Full-time</li>
+              <li class="text-gray-400">•</li>
+              <li>$140,000 - $190,000</li>
+            </ul>
+            <div>
+              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+              >
+                rejected
+              </button>
+            </div>
+            <p class="text-gray-400">
+              Design and maintain scalable backend systems using Python and AWS.
+              Work with modern DevOps practices and cloud infrastructure.
+            </p>
+            <div class="flex gap-5">
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white"
+              >
+                rejected
+              </button>
+            </div>
+          </div>
+          <div><i class="fa-regular fa-trash-can"></i></div>
+        </div>
+
+        <div class="single-card rounded-xl bg-white p-5 flex justify-between">
+          <div class="space-y-5">
+            <h3 class="font-semibold text-[18px]">Innovation Labs</h3>
+            <p class="text-gray-400">UI/UX Engineer</p>
+            <ul class="flex items-center gap-2 text-sm text-gray-400">
+              <li>Austin, TX</li>
+              <li class="text-gray-400">•</li>
+              <li>Full-time</li>
+              <li class="text-gray-400">•</li>
+              <li>$110,000 - $150,000</li>
+            </ul>
+            <div>
+              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+              >
+                rejected
+              </button>
+            </div>
+            <p class="text-gray-400">
+              Create beautiful and functional user interfaces for our suite of
+              products. Strong design skills and frontend development expertise
+              required.
+            </p>
+            <div class="flex gap-5">
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white"
+              >
+                rejected
+              </button>
+            </div>
+          </div>
+          <div><i class="fa-regular fa-trash-can"></i></div>
+        </div>
+
+        <div class="single-card rounded-xl bg-white p-5 flex justify-between">
+          <div class="space-y-5">
+            <h3 class="font-semibold text-[18px]">MegaCorp Solutions</h3>
+            <p class="text-gray-400">JavaScript Developer</p>
+            <ul class="flex items-center gap-2 text-sm text-gray-400">
+              <li>New York, NY</li>
+              <li class="text-gray-400">•</li>
+              <li>Full-time</li>
+              <li class="text-gray-400">•</li>
+              <li>$130,000 - $170,000</li>
+            </ul>
+            <div>
+              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+              >
+                rejected
+              </button>
+            </div>
+            <p class="text-gray-400">
+              Build enterprise applications with JavaScript and modern
+              frameworks. We offer competitive compensation, health insurance,
+              and professional development opportunities.
+            </p>
+            <div class="flex gap-5">
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white"
+              >
+                rejected
+              </button>
+            </div>
+          </div>
+          <div><i class="fa-regular fa-trash-can"></i></div>
+        </div>
+
+        <div class="single-card rounded-xl bg-white p-5 flex justify-between">
+          <div class="space-y-5">
+            <h3 class="font-semibold text-[18px]">StartupXYZ</h3>
+            <p class="text-gray-400">Full Stack Engineer</p>
+            <ul class="flex items-center gap-2 text-sm text-gray-400">
+              <li>Remote</li>
+              <li class="text-gray-400">•</li>
+              <li>Full-time</li>
+              <li class="text-gray-400">•</li>
+              <li>$120,000 - $160,000</li>
+            </ul>
+            <div>
+              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+              >
+                rejected
+              </button>
+            </div>
+            <p class="text-gray-400">
+              Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.
+            </p>
+            <div class="flex gap-5">
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white"
+              >
+                rejected
+              </button>
+            </div>
+          </div>
+          <div><i class="fa-regular fa-trash-can"></i></div>
+        </div>
+
+        <div class="single-card rounded-xl bg-white p-5 flex justify-between">
+          <div class="space-y-5">
+            <h3 class="font-semibold text-[18px]">TechCorp Industries</h3>
+            <p class="text-gray-400">Senior Frontend Developer</p>
+            <ul class="flex items-center gap-2 text-sm text-gray-400">
+              <li>San Francisco, CA</li>
+              <li class="text-gray-400">•</li>
+              <li>Full-time</li>
+              <li class="text-gray-400">•</li>
+              <li>$130,000 - $175,000</li>
+            </ul>
+            <div>
+              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+              >
+                rejected
+              </button>
+            </div>
+            <p class="text-gray-400">
+              We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.
+            </p>
+            <div class="flex gap-5">
+              <button
+                class="uppercase btn border-green-500 text-green-500 bg-white"
+              >
+                Interview
+              </button>
+              <button
+                class="uppercase btn border-red-500 text-red-500 bg-white"
+              >
+                rejected
+              </button>
+            </div>
+          </div>
+          <div><i class="fa-regular fa-trash-can"></i></div>
+        </div>
+      </div>
+    </main>
 
     <script src="./scripts.js/scripts.js"></script>
   </body>
