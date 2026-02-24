@@ -1,4 +1,9 @@
-html, body {
+html,
+body {
   font-family: "Geist", sans-serif;
   background-color: #f8fafc;
+}
+
+.fa-trash-can {
+  cursor: pointer;
 }

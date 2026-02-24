@@ -10,7 +10,7 @@ document.getElementById("all-tab").addEventListener("click", function (event) {
   filterByStatus(status);
 });
 
-let totalCount = document.getElementById("all-cards").children.length;
+let totalCount = document.querySelectorAll("#all-cards .single-card").length;
 document.getElementById("total-count").innerText = totalCount;
 document.getElementById("total-jobs").innerText = `${totalCount} jobs`;
 let interviewCount = [];
@@ -46,6 +46,23 @@ function filterByStatus(status) {
       return;
     }
   });
+
+  const visibleCards = Array.from(
+    document.querySelectorAll("#all-cards .single-card"),
+  ).filter(function (card) {
+    return !card.classList.contains("hidden");
+  });
+  const visibleCount = visibleCards.length;
+  document.getElementById("total-jobs").innerText = `${visibleCount} jobs`;
+
+  const noJobsEl = document.getElementById("no-jobs");
+  if (noJobsEl) {
+    if (visibleCount === 0) {
+      noJobsEl.classList.remove("hidden");
+    } else {
+      noJobsEl.classList.add("hidden");
+    }
+  }
 }
 
 let cards = document.getElementsByClassName("update-status");
@@ -108,3 +125,44 @@ for (let card of cards) {
     document.getElementById("rejected-count").innerText = rejectedCount.length;
   });
 }
+
+
+document.addEventListener("click", function (event) {
+  const trash = event.target.closest(".fa-trash-can");
+  if (!trash) return;
+
+  const card = trash.closest(".single-card");
+  if (!card) return;
+
+  // get company name to remove from arrays
+  const company = (
+    card.querySelector("h3") || card.querySelector("h2")
+  )?.innerText.trim();
+
+  if (company) {
+    interviewCount = interviewCount.filter(function (job) {
+      return job.company !== company;
+    });
+    rejectedCount = rejectedCount.filter(function (job) {
+      return job.company !== company;
+    });
+  }
+
+  card.remove();
+
+  const totalCards = document.querySelectorAll(
+    "#all-cards .single-card",
+  ).length;
+  document.getElementById("total-count").innerText = totalCards;
+
+
+  document.getElementById("interview-count").innerText = interviewCount.length;
+  document.getElementById("rejected-count").innerText = rejectedCount.length;
+
+  const activeTab =
+    document
+      .querySelector("#all-tab .bg-blue-400")
+      ?.textContent.trim()
+      .toLowerCase() || "all";
+  filterByStatus(activeTab);
+});
