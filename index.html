@@ -34,19 +34,18 @@
       <div class="grid gap-5 lg:grid-cols-3">
         <div class="bg-white rounded-xl p-5">
           <p class="text-[#323B49]">Total</p>
-          <p id="total-count" class="font-bold text-[24px]">8</p>
+          <p id="total-count" class="font-bold text-[24px]"></p>
         </div>
         <div class="bg-white rounded-xl p-5">
           <p class="text-[#323B49]">Interview</p>
-          <p id="interview-count" class="font-bold text-[24px] text-green-500">
-            0
-          </p>
+          <p
+            id="interview-count"
+            class="font-bold text-[24px] text-green-500"
+          ></p>
         </div>
         <div class="bg-white rounded-xl p-5">
           <p class="text-[#323B49]">Rejected</p>
-          <p id="rejected-count" class="font-bold text-[24px] text-red-500">
-            0
-          </p>
+          <p id="rejected-count" class="font-bold text-[24px] text-red-500"></p>
         </div>
       </div>
       <hr class="my-[30px] border-gray-200" />
@@ -55,7 +54,7 @@
     <main class="space-y-[24px]">
       <div class="flex justify-between">
         <h2 class="font-semibold text-[20px]">Available Jobs</h2>
-        <p class="text-gray-400 text-md">8 jobs</p>
+        <p id="total-jobs" class="text-gray-400 text-md">0 jobs</p>
       </div>
       <div id="all-tab" class="flex justify-center gap-5 lg:justify-start">
         <button
@@ -71,7 +70,7 @@
         </button>
       </div>
 
-      <div class="all-cards space-y-8">
+      <div id="all-cards" class="all-cards space-y-8">
         <div class="single-card rounded-xl bg-white p-5 flex justify-between">
           <div class="space-y-5">
             <h3 class="font-semibold text-[18px]">Mobile First Corp</h3>
@@ -84,14 +83,18 @@
               <li>$130,000 – $175,000</li>
             </ul>
             <div>
-              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+                class="card-status card-status-na uppercase btn bg-[#EEF4FF]"
+              >
+                Not Applied
+              </button>
+              <button
+                class="card-status card-status-interview uppercase btn border-green-500 text-green-500 bg-white hidden"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+                class="card-status card-status-rejected uppercase btn border-red-500 text-red-500 bg-white hidden"
               >
                 rejected
               </button>
@@ -100,14 +103,14 @@
               Build cross-platform mobile applications using React Native. Work
               on products used by millions of users worldwide.
             </p>
-            <div class="flex gap-5">
+            <div class="update-status flex gap-5">
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white"
+                class="update-status-interview uppercase btn border-green-500 text-green-500 bg-white"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white"
+                class="update-status-rejected uppercase btn border-red-500 text-red-500 bg-white"
               >
                 rejected
               </button>
@@ -128,14 +131,18 @@
               <li>$80,000 - $120,000</li>
             </ul>
             <div>
-              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+                class="card-status card-status-na uppercase btn bg-[#EEF4FF]"
+              >
+                Not Applied
+              </button>
+              <button
+                class="card-status card-status-interview uppercase btn border-green-500 text-green-500 bg-white hidden"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+                class="card-status card-status-rejected uppercase btn border-red-500 text-red-500 bg-white hidden"
               >
                 rejected
               </button>
@@ -144,14 +151,14 @@
               Create stunning web experiences for high-profile clients. Must
               have portfolio and experience with modern web design trends.
             </p>
-            <div class="flex gap-5">
+            <div class="update-status flex gap-5">
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white"
+                class="update-status-interview uppercase btn border-green-500 text-green-500 bg-white"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white"
+                class="update-status-rejected uppercase btn border-red-500 text-red-500 bg-white"
               >
                 rejected
               </button>
@@ -172,14 +179,18 @@
               <li>$125,000 - $165,000</li>
             </ul>
             <div>
-              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+                class="card-status card-status-na uppercase btn bg-[#EEF4FF]"
+              >
+                Not Applied
+              </button>
+              <button
+                class="card-status card-status-interview uppercase btn border-green-500 text-green-500 bg-white hidden"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+                class="card-status card-status-rejected uppercase btn border-red-500 text-red-500 bg-white hidden"
               >
                 rejected
               </button>
@@ -188,14 +199,14 @@
               Transform complex data into compelling visualizations. Required
               skills: D3.js, React, and strong analytical thinking.
             </p>
-            <div class="flex gap-5">
+            <div class="update-status flex gap-5">
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white"
+                class="update-status-interview uppercase btn border-green-500 text-green-500 bg-white"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white"
+                class="update-status-rejected uppercase btn border-red-500 text-red-500 bg-white"
               >
                 rejected
               </button>
@@ -216,14 +227,18 @@
               <li>$140,000 - $190,000</li>
             </ul>
             <div>
-              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+                class="card-status card-status-na uppercase btn bg-[#EEF4FF]"
+              >
+                Not Applied
+              </button>
+              <button
+                class="card-status card-status-interview uppercase btn border-green-500 text-green-500 bg-white hidden"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+                class="card-status card-status-rejected uppercase btn border-red-500 text-red-500 bg-white hidden"
               >
                 rejected
               </button>
@@ -232,14 +247,14 @@
               Design and maintain scalable backend systems using Python and AWS.
               Work with modern DevOps practices and cloud infrastructure.
             </p>
-            <div class="flex gap-5">
+            <div class="update-status flex gap-5">
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white"
+                class="update-status-interview uppercase btn border-green-500 text-green-500 bg-white"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white"
+                class="update-status-rejected uppercase btn border-red-500 text-red-500 bg-white"
               >
                 rejected
               </button>
@@ -260,14 +275,18 @@
               <li>$110,000 - $150,000</li>
             </ul>
             <div>
-              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+                class="card-status card-status-na uppercase btn bg-[#EEF4FF]"
+              >
+                Not Applied
+              </button>
+              <button
+                class="card-status card-status-interview uppercase btn border-green-500 text-green-500 bg-white hidden"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+                class="card-status card-status-rejected uppercase btn border-red-500 text-red-500 bg-white hidden"
               >
                 rejected
               </button>
@@ -277,14 +296,14 @@
               products. Strong design skills and frontend development expertise
               required.
             </p>
-            <div class="flex gap-5">
+            <div class="update-status flex gap-5">
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white"
+                class="update-status-interview uppercase btn border-green-500 text-green-500 bg-white"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white"
+                class="update-status-rejected uppercase btn border-red-500 text-red-500 bg-white"
               >
                 rejected
               </button>
@@ -305,14 +324,18 @@
               <li>$130,000 - $170,000</li>
             </ul>
             <div>
-              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+                class="card-status card-status-na uppercase btn bg-[#EEF4FF]"
+              >
+                Not Applied
+              </button>
+              <button
+                class="card-status card-status-interview uppercase btn border-green-500 text-green-500 bg-white hidden"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+                class="card-status card-status-rejected uppercase btn border-red-500 text-red-500 bg-white hidden"
               >
                 rejected
               </button>
@@ -322,14 +345,14 @@
               frameworks. We offer competitive compensation, health insurance,
               and professional development opportunities.
             </p>
-            <div class="flex gap-5">
+            <div class="update-status flex gap-5">
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white"
+                class="update-status-interview uppercase btn border-green-500 text-green-500 bg-white"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white"
+                class="update-status-rejected uppercase btn border-red-500 text-red-500 bg-white"
               >
                 rejected
               </button>
@@ -350,29 +373,35 @@
               <li>$120,000 - $160,000</li>
             </ul>
             <div>
-              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+                class="card-status card-status-na uppercase btn bg-[#EEF4FF]"
+              >
+                Not Applied
+              </button>
+              <button
+                class="card-status card-status-interview uppercase btn border-green-500 text-green-500 bg-white hidden"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+                class="card-status card-status-rejected uppercase btn border-red-500 text-red-500 bg-white hidden"
               >
                 rejected
               </button>
             </div>
             <p class="text-gray-400">
-              Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.
+              Join our fast-growing startup and work on our core platform.
+              Experience with Node.js and React required. Great benefits and
+              equity package included.
             </p>
-            <div class="flex gap-5">
+            <div class="update-status flex gap-5">
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white"
+                class="update-status-interview uppercase btn border-green-500 text-green-500 bg-white"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white"
+                class="update-status-rejected uppercase btn border-red-500 text-red-500 bg-white"
               >
                 rejected
               </button>
@@ -393,29 +422,35 @@
               <li>$130,000 - $175,000</li>
             </ul>
             <div>
-              <button class="uppercase btn bg-[#EEF4FF]">Not Applied</button>
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white hidden"
+                class="card-status card-status-na uppercase btn bg-[#EEF4FF]"
+              >
+                Not Applied
+              </button>
+              <button
+                class="card-status card-status-interview uppercase btn border-green-500 text-green-500 bg-white hidden"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white hidden"
+                class="card-status card-status-rejected uppercase btn border-red-500 text-red-500 bg-white hidden"
               >
                 rejected
               </button>
             </div>
             <p class="text-gray-400">
-              We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.
+              We are looking for an experienced Frontend Developer to build
+              scalable web applications using React and TypeScript. You will
+              work with a talented team on cutting-edge projects.
             </p>
-            <div class="flex gap-5">
+            <div class="update-status flex gap-5">
               <button
-                class="uppercase btn border-green-500 text-green-500 bg-white"
+                class="update-status-interview uppercase btn border-green-500 text-green-500 bg-white"
               >
                 Interview
               </button>
               <button
-                class="uppercase btn border-red-500 text-red-500 bg-white"
+                class="update-status-rejected uppercase btn border-red-500 text-red-500 bg-white"
               >
                 rejected
               </button>
